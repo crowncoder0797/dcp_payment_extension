@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home page</title>
+</head>
+<body>
+    <script>
+        localStorage.clear();
+    </script>
+    <dcp-payment
+    msg_path="/index.html"
+    msg_text="you can pay with dcp cash"
+    wallet_owners_name="omer2"
+    wallet_id="ea807757-3045-4b3e-87b8-5abcf59b5b3c"
+    payment_path="/payment_page/*.html"
+    payment_text="pay now with dcp cash"
+    LocalStorage_amount_path="__ui[4][1].negotiationResult.sellerProposal.checkoutTotal.value.amount"
+    LocalStorage_currency_path="__ui[4][1].negotiationResult.sellerProposal.checkoutTotal.value.currencyCode "
+    LocalStorage_purchaseId_path="trackedSourceId"
+    returned_path="/thanks.html"
+    reporting_path="https://my_server/api/this_api_dose_not_exssist_yet"
+    arbitrator=false
+    open_without_amount=false
+    separate_window=false
+    >
+    
+    <h1>hi, this is the home page</h1>
+    
+    <!-- קישור לדף השני -->
+    <a href="payment_page/1234.html">go to the payment_page</a><br/>
+    <a href="irrelevant_page.html">go to the irrelevant_page</a>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment_page</title>
+</head>
+
+<body>
+    <script>
+        // קביעת אובייקט מקונן
+        const nestedObject = ["", "", "", "", ["", {
+            negotiationResult: { sellerProposal: { checkoutTotal: { value: { amount: 44, currencyCode: 50 } } } }
+        }
+        ]];
+
+        // שמירת האובייקט ב־localStorage בצורה מקוננת
+        localStorage.setItem('__ui', JSON.stringify(nestedObject));
+        localStorage.setItem('trackedSourceId', "20");
+    </script>
+    <h1>this is the payment_page</h1>
+
+    <!-- קישור לדף הבית -->
+    <a href="../index.html">back to home page</a>
+
+</body>
+
+</html>
